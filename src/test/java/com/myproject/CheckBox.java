@@ -1,6 +1,7 @@
 package com.myproject;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -49,5 +50,11 @@ public class CheckBox {
 
         Assert.assertTrue(checkbox1.isSelected());
 
+    }
+
+    @After
+
+    public void tearDown(){
+        driver.quit();
     }
 }
